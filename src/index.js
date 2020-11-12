@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Nav from './Nav';
+import Header from './Components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Nav />
-    <App />
+    <Header />
   </React.StrictMode>,
   document.getElementById('root')
 );
