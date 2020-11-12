@@ -9,7 +9,7 @@ const useStyles = makeStyles(()=>{
     
 })
 
-const Header = ()=>{
+const Ken_login = ()=>{
     return(
         <AppBar position="static">
         <Toolbar>
@@ -22,4 +22,4 @@ const Header = ()=>{
     );
 }
 
-export default Header;
+export default Ken_login;
