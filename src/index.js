@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Ken_login from './Components/Login/Ken_login';
+import Ken_login from './Components/Login/CalliLogin';
 import Header from './Components/Header';
 import Landing from './Components/Hompages/Landing';
+import CalliLogin from './Components/Login/CalliLogin';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Landing />
+    <CalliLogin />
   </React.StrictMode>,
   document.getElementById('root')
 );
