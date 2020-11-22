@@ -2,7 +2,7 @@
 
 <!-- https://github.com/dscmsit/dscmsit/blob/master/images/HomePageForREADME.jpg?raw=true -->
 
-![alt text](https://capacitybay-webmentor.github.io/react-app-user-registeration//screenshots/git-banner2.png"DSC-MSIT")
+![alt text](https://prnt.sc/vnrehi"CapacityBay")
 
 ## Contributions and PR
 
