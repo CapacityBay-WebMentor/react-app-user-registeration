@@ -2,7 +2,7 @@
 
 <!-- https://github.com/dscmsit/dscmsit/blob/master/images/HomePageForREADME.jpg?raw=true -->
 
-![alt text](https://prnt.sc/vnrehi"CapacityBay")
+![alt text](screenshot/banner-2.png"CapacityBay")
 
 ## Contributions and PR
 
