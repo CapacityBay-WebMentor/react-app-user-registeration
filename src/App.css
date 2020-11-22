@@ -68,7 +68,9 @@ body{
   margin-top: 65px;
   padding-left:659px;
 }
-
+.buttonCont button{
+  
+}
 .call-to-action{
   width: 700px;
   margin: 0 auto;
@@ -91,6 +93,21 @@ body{
   color: rgb(61, 59, 59);
   font-family: 'Jua', sans-serif;
   padding: 30px;
+}
+.appleDots{
+  display: flex;
+  justify-content: flex-start;
+  background-color: green;
+  position: absolute;
+  top: 70;
+  width: 82px;
+
+}
+.appleDots span:nth-child(1){
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
 }
 @media only screen and (max-width: 600px) 
   {

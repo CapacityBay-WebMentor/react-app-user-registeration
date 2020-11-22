@@ -4,8 +4,9 @@ import Download from '../../img/download.svg';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
 
-const Atag = styled.a`
-  font-size: 40px;
+const myDiv = styled.div`
+  font-size:30px;
+  color: red;
 `
 
 function Landing() {
@@ -31,8 +32,14 @@ function Landing() {
             
           </div>
           <div className="buttonCont"> <Button variant="contained" size="large" style={{height: 70, borderRadius: 5}} color="primary">Become a member </Button> </div>
+              {/* The three circular dots */}
+            <div className="appleDots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
         </div>
-      
+    
     </div>
   );
 }

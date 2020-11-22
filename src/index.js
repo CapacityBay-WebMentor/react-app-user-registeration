@@ -11,7 +11,8 @@ import Landing from './Components/Hompages/Landing';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Landing />
+    <Landing />   
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );
