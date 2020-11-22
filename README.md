@@ -3,6 +3,7 @@
 <!-- https://github.com/dscmsit/dscmsit/blob/master/images/HomePageForREADME.jpg?raw=true -->
 
 ![alt text](git-banner2.png"CapacityBay")
+<img src="git-banner2.jpg">
 
 ## Contributions and PR
 
