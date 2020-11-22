@@ -1,28 +1,28 @@
-# [WebMentor Developer Student Club - MSIT](http://dsc.msit.in/)
+# [WebMentor Developer Student Club - CapacityBay](https://capacitybay-webmentor.github.io/react-app-user-registeration/)
 
 <!-- https://github.com/dscmsit/dscmsit/blob/master/images/HomePageForREADME.jpg?raw=true -->
 
-![alt text](https://i.ibb.co/7r0vdgg/Screenshot-2020-02-19-at-2-44-52-PM.png"DSC-MSIT")
+![alt text](https://capacitybay-webmentor.github.io/react-app-user-registeration//screenshots/git-banner2.png"DSC-MSIT")
 
 ## Contributions and PR
 
-- All the PRs should be generated against `development` branch
+- All the PRs should be generated against `master` branch
 - Remember to run `npm run format` before creating pull request so that the code is formatted.
-- Netlify will create a preview inside pull request, please check if your work is fine.
+- Github will create a preview inside pull request, please check if your work is fine.
 - If the PR is related to any front end change, please attach relevant screenshots in the pull request description.
 
-## Netlify Deployment
+## Github Deployment
 
-- You can find the netlify deployment at https://dscmsit.netlify.app/ based on the `development branch`
+- You can find the github deployment at https://capacitybay-webmentor.github.io/react-app-user-registeration/ based on the `master branch`
 - It might include those changes as well, which are in currently in development and are worked upon
 - These changes might not be published yet to the official website.
-- So it's recommended to go through the netlify deployed website first before raising an issue or making any pull request.
+- So it's recommended to go through the github react deployed website first before raising an issue or making any pull request.
 
 ## Quick start
 
 Quick start options:
 
-- [Download from Github](https://github.com/dscmsit/dscmsit.github.io.git).
+- [Download from Github](https://capacitybay-webmentor.github.io/react-app-user-registeration/).
 - Clone the repo: `https://github.com/dscmsit/dscmsit.github.io.git`.
 - `npm install` to install all the devDependencies
 
