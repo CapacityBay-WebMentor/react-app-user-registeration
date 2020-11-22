@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
+
 .container {
     margin-top: 2%;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
     /* border: 2px solid blue; */
-    width: 80%;
+    width: 70%;
     height: 90vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -25,6 +26,8 @@
     /* border: 2px solid rgb(43, 43, 58); */
     width: 50%;
     height: 90vh;
+    /* background: rgb(119, 99, 206); */
+
 }
 
 .img {
@@ -39,17 +42,25 @@
 }
 
 .form-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /* align-items: center; */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    margin-left:2% ;
+    border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    width: 50%;
 }
 
 .buttonSection {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .socials {
@@ -62,10 +73,61 @@
     color: rgb(48, 42, 42);
 }
 
-.facebookIcon {
-    background-image: url("../img/icons8-facebook-f.svg");
+.MuiInputBase-root:hover {
+    border: 0px solid yellow;
 }
 
-.googleIcon {
-    background-image: url("../img/icons8-google.svg");
+.MuiButton-label {
+    font-size: 0.7rem;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.twitter, .google {
+    /* background-color: url("../img/twitter-135.png"); */
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1, .div2, .div3 {
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
+    background: #fff;
+}
+
+/* .MuiFormLabel-root:hover {
+    background-color: red;
+} */
+
+.MuiTypography-body1, .MuiButton-label {
+    font-size: 0.8rem;
+    text-transform: none;
+    /* color: ; */
 }
