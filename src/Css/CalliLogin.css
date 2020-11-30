@@ -151,111 +151,120 @@
 }
 
 
-@media screen and (max-width:600px){
-    .MuiTypography-body1, .MuiButton-label{
+@media screen and (max-width:300px){
+    .welcomMsg{
         font-size: x-small;
-    }
-  
-    .buttonSection {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-around; */
-        /* align-items: ; */
-        width: 100%;
-        height: 70px;
-    }
-    .btns{
-        /* font-size: 4px; */
-        /* width:6rem; */
-        /* padding: 0; */
-        width: 100%;
-        
-        
-    }
-    .welcomMsg p{
-        font-size: 0.3rem;
-    }
-    .div1, .div2, .div3 {
-        -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        height: 37px;
-        width: 37px;
-        border-radius: 50%;
-        background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
-        background: #fff;
-    }
-    .welcomMsg {
-        margin-top: "3vh";
-        color: rgb(48, 42, 42);
-        font-size: 0.8rem;
-        text-transform: capitalize;
-        word-spacing: 0.2rem;
+    }   
+       .MuiTypography-body1, .MuiButton-label{
+           font-size: xx-small;
+       }
+    
+       .buttonSection {
+           display: flex;
+           flex-direction: column;
+           /* justify-content: space-around; */
+           /* align-items: ; */
+           width: 100%;
+           height: 70px;
+       }
+       .btns{
+           /* font-size: 4px; */
+           /* width:6rem; */
+           /* padding: 0; */
+           width: 100%;
+           
+           
+       }
+       .div1, .div2, .div3 {
+           -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+           box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+           display: -webkit-box;
+           display: -ms-flexbox;
+           display: flex;
+           -webkit-box-pack: center;
+           -ms-flex-pack: center;
+           justify-content: center;
+           -webkit-box-align: center;
+           -ms-flex-align: center;
+           align-items: center;
+           height: 27px;
+           width: 27px;
+           border-radius: 50%;
+           background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
+           background: #fff;
+       }
+       .lastPara  {
+           margin-top: "3vh";
+           color: rgb(48, 42, 42);
+           font-size: 0.5rem;
+           text-transform: capitalize;
+           word-spacing: 0.1rem;
+   
+           
+       }
+       .Para {
+           /* margin-top: "3vh"; */
+           color: rgb(48, 42, 42);
+           font-size: 0.5rem;
+           text-transform: capitalize;
+           /* word-spacing: rem; */
+           /* text-align: center; */
+   
+           
+       }
+       .align{
+           width: 100%;
+           text-align: center;
+       }
+       .center {
+           margin-left: auto;
+           margin-right: auto;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           width: 100%;
+           overflow: inherit;
+       }
+       .MuiOutlinedInput-input{
+           font-size: xx-small;
+       }
+       .MuiOutlinedInput-root {
+           height: 30px;
+       }
+       .MuiTypography-body1, .MuiButton-label {
+           font-size: xx-small;
+       }
+     .MuiOutlinedInput-input{
+       padding:13px 1px;
+       font-size: smaller;
+     }
+     .form-section {
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 0.1rem;
+       padding-right: 0.1rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       /* align-items: center; */
+       /* margin-left: auto; */
+       margin-left:2% ;
+       border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+       width: 50%;
+   }
+   .MuiSvgIcon-root{
+       fill: currentColor;
+   width: 0.4em;
+   height: 0.4em;
+   display: inline-block;
+   font-size: 1.5rem;
+   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   flex-shrink: 0;
+   -moz-user-select: none;
+   }
+   }
 
-        
-    }
-    .Para {
-        /* margin-top: "3vh"; */
-        color: rgb(48, 42, 42);
-        font-size: 0.7rem;
-        text-transform: capitalize;
-        word-spacing: 0.2rem;
-        /* text-align: center; */
-
-        
-    }
-
-  .MuiOutlinedInput-input{
-    padding:13px 1px;
-    font-size: smaller;
-  }
-  .MuiOutlinedInput-root {
-    height: 36px;
-}
-.MuiTypography-body1, .MuiButton-label {
-    font-size: xx-small;
-}
-.MuiOutlinedInput-input{
-padding:13px 1px;
-font-size: smaller;
-}
-.MuiSvgIcon-root{
-    fill: currentColor;
-width: 0.7em;
-height: 0.7em;
-display: inline-block;
-font-size: 1.6rem;
-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-flex-shrink: 0;
--moz-user-select: none;
-}
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-   text-align: center;
-   height: 30px;
-
-
-}
-.MuiFormControlLabel-root{
-    margin-left: -10px;
-}
-.lastPara{
-    font-size: small;
-}
-}
 @media screen and (max-width:400px){
     .MuiTypography-body1, .MuiButton-label{
         font-size: x-small;
@@ -359,15 +368,11 @@ flex-shrink: 0;
 -moz-user-select: none;
 }
 }
-
-@media screen and (max-width:300px){
- .welcomMsg{
-     font-size: x-small;
- }   
+@media screen and (max-width:600px){
     .MuiTypography-body1, .MuiButton-label{
-        font-size: xx-small;
+        font-size: small;
     }
- 
+  
     .buttonSection {
         display: flex;
         flex-direction: column;
@@ -375,6 +380,22 @@ flex-shrink: 0;
         /* align-items: ; */
         width: 100%;
         height: 70px;
+    }
+    .form-section {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        /* margin-left: auto; */
+        margin-left:2% ;
+        border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+        width: 50%;
+        /* height: 60vh; */
     }
     .btns{
         /* font-size: 4px; */
@@ -384,6 +405,9 @@ flex-shrink: 0;
         
         
     }
+    /* .welcomMsg {
+        font-size: 0.8rem;
+    } */
     .div1, .div2, .div3 {
         -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
@@ -396,80 +420,74 @@ flex-shrink: 0;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 27px;
-        width: 27px;
+        height: 37px;
+        width: 37px;
         border-radius: 50%;
         background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
         background: #fff;
     }
-    .lastPara  {
+    .welcomMsg {
         margin-top: "3vh";
         color: rgb(48, 42, 42);
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         text-transform: capitalize;
-        word-spacing: 0.1rem;
+        word-spacing: 0.2rem;
 
         
     }
     .Para {
         /* margin-top: "3vh"; */
         color: rgb(48, 42, 42);
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         text-transform: capitalize;
-        /* word-spacing: rem; */
+        word-spacing: 0.2rem;
         /* text-align: center; */
 
         
     }
-    .align{
-        width: 100%;
-        text-align: center;
-    }
-    .center {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        overflow: inherit;
-    }
-    .MuiOutlinedInput-input{
-        font-size: xx-small;
-    }
-    .MuiOutlinedInput-root {
-        height: 30px;
-    }
-    .MuiTypography-body1, .MuiButton-label {
-        font-size: xx-small;
-    }
+
   .MuiOutlinedInput-input{
     padding:13px 1px;
     font-size: smaller;
   }
-  .form-section {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    /* margin-left: auto; */
-    margin-left:2% ;
-    border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    width: 50%;
+  .MuiOutlinedInput-root {
+    height: 36px;
+}
+.MuiTypography-body1, .MuiButton-label {
+    font-size: xx-small;
+}
+.MuiOutlinedInput-input{
+padding:13px 1px;
+font-size: smaller;
 }
 .MuiSvgIcon-root{
     fill: currentColor;
-width: 0.4em;
-height: 0.4em;
+width: 0.7em;
+height: 0.7em;
 display: inline-block;
-font-size: 1.5rem;
+font-size: 1.6rem;
 transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 flex-shrink: 0;
 -moz-user-select: none;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+   text-align: center;
+   height: 30px;
+
+
+}
+.MuiFormControlLabel-root{
+    margin-left: -10px;
+}
+.lastPara{
+    font-size: small;
 }
 }
