@@ -20,7 +20,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
-import Particles from "react-particles-js";
+// import Particles from "react-particles-js";
 // import Tilt from "react-tilt";npm start
 
 //  i am still working on this interface
@@ -54,68 +54,6 @@ const useStyles = makeStyles((theme) => ({
   },
   // '&:hover':bac
 }));
-
-// functional component
-
-function PasswordInput() {
-  const classes = useStyles();
-  const [values, setValues] = React.useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
-
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-  return (
-    <div className={classes.root}>
-      <StylesProvider injectFirst>
-        <FormControl className={clsx(classes.textField)} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">
-            Password
-          </InputLabel>
-          <OutlinedInput
-            className={classes.greenButton}
-            id="outlined-adornment-password"
-            type={values.showPassword ? "text" : "password"}
-            value={values.password}
-            onChange={handleChange("password")}
-            startAdornment={
-              <InputAdornment position="start">
-                <LockIcon size="small" style={{ color: "#ceb7b7" }} />
-              </InputAdornment>
-            }
-            // style={{ width: "100%" }}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
-            labelWidth={70}
-          />
-        </FormControl>
-      </StylesProvider>
-    </div>
-  );
-}
 
 function Twitter() {
   return (
@@ -244,203 +182,268 @@ function Facebook() {
     </div>
   );
 }
-function EmailTextField() {
-  return (
-    <TextField
-      id="input-with-icon-textfield"
-      required
-      label="Email"
-      variant="outlined"
-      style={{ width: "100%" }}
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <MailOutlineIcon size="small" style={iconColor} />
-          </InputAdornment>
-        ),
-      }}
-    />
-  );
-}
 
-function FormController(props) {
-  const setStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex",
-      flexWrap: "wrap",
-    },
-    margin: {
-      margin: theme.spacing(1),
-    },
-    withoutLabel: {
-      marginTop: theme.spacing(3),
-    },
-    textField: {
-      width: "100%",
-    },
-    greenButton: {
-      "&:hover": {
-        backgroundColor: "yellow",
-        color: "#FFF",
-      },
-    },
-    font: {
-      fontSize: "0.7rem",
-    },
-    fabBackround: {
-      borderColor: "#ffffff",
-    },
-    // '&:hover':bac
-  }));
+// smart Component
+function CalliLogin() {
+  const classes = useStyles();
+  const [values, setValues] = React.useState({
+    password: "",
+    showPassword: false,
+  });
 
-  const useStyles = makeStyles({
-    root: {
-      width: "40%",
-      // marginBottom: "2rem"
-      // fontSize: "0.9rem",
-    },
-  });
-  const inputStyles = makeStyles({
-    root: {
-      fontSize: "1rem",
-    },
-  });
-  const iconColor = {
-    color: " #ceb7b7",
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
   };
 
-  const forgotPasswordComponent = () => {
-    return <Button color="primary">forgot password?</Button>;
+  const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
   };
 
-  const CheckBoxComponent = () => {
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const PasswordInput = () => {
     const classes = useStyles();
+    // const [values, setValues] = React.useState({});
 
     return (
-      <StylesProvider injectFirst>
-        <FormControlLabel
-          // classNam
-          className={classes.font}
-          control={<Checkbox color="primary" />}
-          label="Remember me"
-          labelPlacet="enmend"
-          size="extra-small"
-        />
-      </StylesProvider>
-    );
-  };
-
-  const StyledFabTwitter = () => {
-    return (
-      <div className="div3">
-        <Twitter />
+      <div className={classes.root}>
+        <StylesProvider injectFirst>
+          <FormControl className={clsx(classes.textField)} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">
+              Password
+            </InputLabel>
+            <OutlinedInput
+              className={classes.greenButton}
+              id="outlined-adornment-password"
+              type={values.showPassword ? "text" : "password"}
+              value={values.password}
+              onChange={handleChange("password")}
+              startAdornment={
+                <InputAdornment position="start">
+                  <LockIcon size="small" style={{ color: "#ceb7b7" }} />
+                </InputAdornment>
+              }
+              // style={{ width: "100%" }}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              labelWidth={70}
+            />
+          </FormControl>
+        </StylesProvider>
       </div>
     );
   };
-  const StyledFabGoogle = () => {
+  // email section
+  const EmailTextField = () => {
     return (
-      <div className="div1">
-        <Google />
-      </div>
+      <TextField
+        id="input-with-icon-textfield"
+        required
+        label="Email"
+        variant="outlined"
+        style={{ width: "100%" }}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <MailOutlineIcon size="small" style={iconColor} />
+            </InputAdornment>
+          ),
+        }}
+      />
     );
   };
-  const StyledFabFacebook = () => {
-    return (
-      <div className="div2">
-        <Facebook />
-      </div>
-    );
-  };
+  const FormController = () => {
+    const setStyles = makeStyles((theme) => ({
+      root: {
+        display: "flex",
+        flexWrap: "wrap",
+      },
+      margin: {
+        margin: theme.spacing(1),
+      },
+      withoutLabel: {
+        marginTop: theme.spacing(3),
+      },
+      textField: {
+        width: "100%",
+      },
+      greenButton: {
+        "&:hover": {
+          backgroundColor: "yellow",
+          color: "#FFF",
+        },
+      },
+      font: {
+        fontSize: "0.7rem",
+      },
+      fabBackround: {
+        borderColor: "#ffffff",
+      },
+      // '&:hover':bac
+    }));
 
-  const StyledButton = () => {
-    const myStyle = useStyles();
-    return (
-      <Button
-        // style={{ fontSize: "1px" }}
-        className={(myStyle.root, "btns")}
-        size="medium"
-        variant="contained"
-        color="primary"
-      >
-        Login
-      </Button>
-    );
-  };
+    const useStyles = makeStyles({
+      root: {
+        width: "40%",
+        // marginBottom: "2rem"
+        // fontSize: "0.9rem",
+      },
+    });
+    const inputStyles = makeStyles({
+      root: {
+        fontSize: "1rem",
+      },
+    });
+    const iconColor = {
+      color: " #ceb7b7",
+    };
 
-  const StyledButton2 = () => {
-    const myStyle = useStyles();
-    // const classes = setStyles();
+    const ForgotPasswordComponent = () => {
+      return <Button color="primary">forgot password?</Button>;
+    };
 
-    return (
-      <StylesProvider injectFirst>
+    const CheckBoxComponent = () => {
+      const classes = useStyles();
+
+      return (
+        <StylesProvider injectFirst>
+          <FormControlLabel
+            // classNam
+            className={classes.font}
+            control={<Checkbox color="primary" />}
+            label="Remember me"
+            labelplacet="enmend"
+            size="extra-small"
+          />
+        </StylesProvider>
+      );
+    };
+
+    const StyledFabTwitter = () => {
+      return (
+        <div className="div3">
+          <Twitter />
+        </div>
+      );
+    };
+    const StyledFabGoogle = () => {
+      return (
+        <div className="div1">
+          <Google />
+        </div>
+      );
+    };
+    const StyledFabFacebook = () => {
+      return (
+        <div className="div2">
+          <Facebook />
+        </div>
+      );
+    };
+
+    const StyledButton = () => {
+      const myStyle = useStyles();
+      return (
         <Button
+          // style={{ fontSize: "1px" }}
           className={(myStyle.root, "btns")}
           size="medium"
-          margin="normal"
-          variant="outlined"
+          variant="contained"
           color="primary"
         >
-          Create Account
+          Login
         </Button>
+      );
+    };
+
+    const StyledButton2 = () => {
+      const myStyle = useStyles();
+      // const classes = setStyles();
+
+      return (
+        <StylesProvider injectFirst>
+          <Button
+            className={(myStyle.root, "btns")}
+            size="medium"
+            margin="normal"
+            variant="outlined"
+            color="primary"
+          >
+            Register
+          </Button>
+        </StylesProvider>
+      );
+    };
+    return (
+      <StylesProvider injectFirst>
+        {/* <div> */}
+        <h2 className="welcomMsg">Welcome Back :)</h2>
+        <p className="Para">
+          To keep connected with us please login with your personal information
+          {" 🔔"}
+        </p>
+        <EmailTextField />
+        <PasswordInput />
+        {/* checkbox and forgot password */}
+        <div className="center">
+          <div className="align">
+            {" "}
+            <CheckBoxComponent />
+          </div>
+          <div className="align">
+            <ForgotPasswordComponent />
+          </div>
+        </div>
+        <div className="buttonSection">
+          <StyledButton />
+          <StyledButton2 />
+        </div>
+
+        <div>
+          <p className="lastPara" style={{ color: "#382f34" }}>
+            Or you can join us with
+          </p>
+        </div>
+        <div className="socials">
+          <StyledFabGoogle />
+          <StyledFabFacebook />
+          <StyledFabTwitter />
+        </div>
+        {/* </div> */}
       </StylesProvider>
     );
   };
+  // < Button color="primary" > Primary</Button>
+  // checkMediaQuery = () => {};
+
   return (
     <StylesProvider injectFirst>
-      {/* <div> */}
-      <h2 className="welcomMsg">Welcome Back :)</h2>
-      <p className="Para">
-        To keep connected with us please login with your personal information
-        {" 🔔"}
-      </p>
-      <EmailTextField />
-      <PasswordInput />
-      {/* checkbox and forgot password */}
-      <div className="center">
-        <CheckBoxComponent />
-        <forgotPasswordComponent />
-      </div>
-      <div className="buttonSection">
-        <StyledButton />
-        <StyledButton2 />
-      </div>
+      <div className="container">
+        <div className="innerContainer">
+          <div className="illustration">
+            <div className="img"></div>
+          </div>
+          <div className="form-section" style={{ width: "45%" }}>
+            {FormController()}
 
-      <div>
-        <p className="welcomMsg" style={{ color: "#382f34" }}>
-          Or you can join us with
-        </p>
-      </div>
-      <div className="socials">
-        <StyledFabGoogle />
-        <StyledFabFacebook />
-        <StyledFabTwitter />
-      </div>
-      {/* </div> */}
-    </StylesProvider>
-  );
-}
-// smart Component
-class CalliLogin extends Component {
-  // < Button color="primary" > Primary</Button>
-  checkMediaQuery = () => {};
-  render() {
-    return (
-      <StylesProvider injectFirst>
-        <div className="container">
-          <div className="innerContainer">
-            <div className="illustration">
-              <div className="img"></div>
-            </div>
-            <div className="form-section" style={{ width: "45%" }}>
-              {FormController()}
-
-              {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
-            </div>
+            {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
           </div>
         </div>
-      </StylesProvider>
-    );
-  }
+      </div>
+    </StylesProvider>
+  );
 }
 
 export default CalliLogin;
