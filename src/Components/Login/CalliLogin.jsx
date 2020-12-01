@@ -5,6 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
+import InstagramIcon from "@material-ui/icons/Instagram";
 import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { green } from "@material-ui/core/colors";
@@ -249,20 +250,23 @@ function CalliLogin() {
   // email section
   const EmailTextField = () => {
     return (
-      <TextField
-        id="input-with-icon-textfield"
-        required
-        label="Email"
-        variant="outlined"
-        style={{ width: "100%" }}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <MailOutlineIcon size="small" style={iconColor} />
-            </InputAdornment>
-          ),
-        }}
-      />
+      <StylesProvider>
+        <TextField
+          className="inputSpace"
+          id="input-with-icon-textfield"
+          required
+          label="Email"
+          variant="outlined"
+          style={{ width: "100%" }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <MailOutlineIcon size="small" style={iconColor} />
+              </InputAdornment>
+            ),
+          }}
+        />
+      </StylesProvider>
     );
   };
   const FormController = () => {
@@ -319,14 +323,15 @@ function CalliLogin() {
       const classes = useStyles();
 
       return (
-        <StylesProvider injectFirst>
+        <StylesProvider>
           <FormControlLabel
             // classNam
+
             className={classes.font}
             control={<Checkbox color="primary" />}
             label="Remember me"
-            labelplacet="enmend"
-            size="extra-small"
+            labelplacement="end"
+            size="small"
           />
         </StylesProvider>
       );
@@ -334,23 +339,25 @@ function CalliLogin() {
 
     const StyledFabTwitter = () => {
       return (
-        <div className="div3">
-          <Twitter />
-        </div>
+        <Fab aria-label="add" className="div1">
+          <TwitterIcon color="primary" />
+        </Fab>
       );
     };
     const StyledFabGoogle = () => {
       return (
-        <div className="div1">
-          <Google />
-        </div>
+        // <div >
+        <Fab aria-label="add" className="div1">
+          <InstagramIcon color="primary" />
+        </Fab>
+        // </div>
       );
     };
     const StyledFabFacebook = () => {
       return (
-        <div className="div2">
+        <Fab aria-label="add" className="div1">
           <Facebook />
-        </div>
+        </Fab>
       );
     };
 
@@ -391,12 +398,14 @@ function CalliLogin() {
       <StylesProvider injectFirst>
         {/* <div> */}
         <h2 className="welcomMsg">Welcome Back :)</h2>
-        <p className="Para">
+        <p className="para">
           To keep connected with us please login with your personal information
           {" 🔔"}
         </p>
-        <EmailTextField />
-        <PasswordInput />
+        <div className="textField">
+          <EmailTextField />
+          <PasswordInput />
+        </div>
         {/* checkbox and forgot password */}
         <div className="center">
           <div className="align">
