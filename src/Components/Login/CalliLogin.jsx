@@ -211,62 +211,58 @@ function CalliLogin() {
 
     return (
       <div className={classes.root}>
-        <StylesProvider injectFirst>
-          <FormControl className={clsx(classes.textField)} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-password">
-              Password
-            </InputLabel>
-            <OutlinedInput
-              className={classes.greenButton}
-              id="outlined-adornment-password"
-              type={values.showPassword ? "text" : "password"}
-              value={values.password}
-              onChange={handleChange("password")}
-              startAdornment={
-                <InputAdornment position="start">
-                  <LockIcon size="small" style={{ color: "#ceb7b7" }} />
-                </InputAdornment>
-              }
-              // style={{ width: "100%" }}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              labelWidth={70}
-            />
-          </FormControl>
-        </StylesProvider>
+        <FormControl className={clsx(classes.textField)} variant="outlined">
+          <InputLabel htmlFor="outlined-adornment-password">
+            Password
+          </InputLabel>
+          <OutlinedInput
+            className={classes.greenButton}
+            id="outlined-adornment-password"
+            type={values.showPassword ? "text" : "password"}
+            value={values.password}
+            onChange={handleChange("password")}
+            startAdornment={
+              <InputAdornment position="start">
+                <LockIcon size="small" style={{ color: "#ceb7b7" }} />
+              </InputAdornment>
+            }
+            // style={{ width: "100%" }}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            }
+            labelWidth={70}
+          />
+        </FormControl>
       </div>
     );
   };
   // email section
   const EmailTextField = () => {
     return (
-      <StylesProvider>
-        <TextField
-          className="inputSpace"
-          id="input-with-icon-textfield"
-          required
-          label="Email"
-          variant="outlined"
-          style={{ width: "100%" }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <MailOutlineIcon size="small" style={iconColor} />
-              </InputAdornment>
-            ),
-          }}
-        />
-      </StylesProvider>
+      <TextField
+        className="inputSpace"
+        id="input-with-icon-textfield"
+        required
+        label="Email"
+        variant="outlined"
+        style={{ width: "100%" }}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <MailOutlineIcon size="small" style={iconColor} />
+            </InputAdornment>
+          ),
+        }}
+      />
     );
   };
   const FormController = () => {
@@ -347,7 +343,7 @@ function CalliLogin() {
     const StyledFabGoogle = () => {
       return (
         // <div >
-        <Fab aria-label="add" className="div1">
+        <Fab className="div1">
           <InstagramIcon color="primary" />
         </Fab>
         // </div>
@@ -355,7 +351,8 @@ function CalliLogin() {
     };
     const StyledFabFacebook = () => {
       return (
-        <Fab aria-label="add" className="div1">
+        <Fab className="div1">
+          {/* custom svg */}
           <Facebook />
         </Fab>
       );
@@ -378,20 +375,17 @@ function CalliLogin() {
 
     const StyledButton2 = () => {
       const myStyle = useStyles();
-      // const classes = setStyles();
 
       return (
-        <StylesProvider injectFirst>
-          <Button
-            className={(myStyle.root, "btns")}
-            size="medium"
-            margin="normal"
-            variant="outlined"
-            color="primary"
-          >
-            Register
-          </Button>
-        </StylesProvider>
+        <Button
+          className={(myStyle.root, "btns")}
+          size="medium"
+          margin="normal"
+          variant="outlined"
+          color="primary"
+        >
+          Register
+        </Button>
       );
     };
     return (
@@ -439,20 +433,20 @@ function CalliLogin() {
   // checkMediaQuery = () => {};
 
   return (
-    <StylesProvider injectFirst>
-      <div className="container">
-        <div className="innerContainer">
-          <div className="illustration">
-            <div className="img"></div>
-          </div>
-          <div className="form-section" style={{ width: "45%" }}>
-            {FormController()}
+    // <StylesProvider injectFirst>
+    <div className="container">
+      <div className="innerContainer">
+        <div className="illustration">
+          <div className="img"></div>
+        </div>
+        <div className="form-section" style={{ width: "45%" }}>
+          {FormController()}
 
-            {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
-          </div>
+          {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
         </div>
       </div>
-    </StylesProvider>
+    </div>
+    // </StylesProvider>
   );
 }
 
