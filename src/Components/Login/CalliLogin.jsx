@@ -392,7 +392,7 @@ function CalliLogin() {
       <StylesProvider injectFirst>
         {/* <div> */}
         <h2 className="welcomMsg">Welcome Back :)</h2>
-        <p className="para">
+        <p className="topText">
           To keep connected with us please login with your personal information
           {" 🔔"}
         </p>
