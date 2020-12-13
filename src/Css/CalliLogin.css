@@ -4,18 +4,31 @@
     box-sizing: border-box;
 }
 body{
-    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));;
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));;
+   
+}
+.parentContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(65, 65, 42);
+    position: relative;
+}
+.navBar{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid blue;
 }
 
 .container {
-    /* margin-top: auto;
-    margin-bottom: auto; */
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
+
     width: 75vw;
-    height: 95vh;
+    height: 83vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 .innerContainer {
@@ -25,46 +38,57 @@ body{
 .illustration {
 
     width: 50%;
-    height: 95vh;
+    height: 80vh;
+    /* border: 1px solid blue; */
 
+/* margin:auto; */
+position: relative;
 }
 .MuiFab-root:hover {
     text-decoration: none;
     background-color: #ffffff;
 }
-.MuiFab-root {
-    min-height: auto;
-     
- }
 .img {
-    width: 100%;
-    height: 90vh;
+    /* min-height: auto; */
+    
+width: 100%;
+    height: 55vh;
     background-image: url("../img/undraw_remotely_2j6y.svg");
     background-position: center;
     background-size: cover;
-    background-size: 80%;
+    background-size:90%;
+    position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
     background-repeat: no-repeat;
 }
 
 .form-section {
-    /* padding-top: 10px; */
-    padding-bottom: 10px;
-    padding-left: 1rem;
-    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
  
-    margin-left:2% ;
+    margin-left:auto ;
+    margin-right: auto;
     border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    width: 50%;
+    /* border: 2px solid red; */
+    width: 49%;
+}
+.welcomMsg {
+    font-size: x-large;
+    color: rgb(48, 42, 42);
+    font-weight: bold;
 }
 .textField{
-    height: 150px;
+    height: 25vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
 }
 .buttonSection {
     display: flex;
@@ -74,28 +98,12 @@ body{
 
 .socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.welcomMsg {
-    /* margin-top: "3vh"; */
-    font-size: medium;
-    color: rgb(48, 42, 42);
-    font-weight: 900;
-}
-.Para {
-    color: rgb(48, 42, 42);
-    font-size: 0.3rem;
-    text-transform: capitalize;
-    word-spacing: 0.2rem;
-
-}
-
-
-
-.MuiButton-label {
+/* .MuiButton-label {
     font-size: 0.7rem;
-}
+} */
 
 .center {
     margin-left: auto;
@@ -106,7 +114,6 @@ body{
 }
 
 .twitter, .google {
-    margin-top: 0.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,6 +123,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.MuiOutlinedInput-adornedStart {
+    padding-left: 10px;
 }
 
 .div1, .div2, .div3 {
@@ -148,10 +158,13 @@ body{
 }
 .btns{
     font-size: 0.2rem;
-    width:8rem;
+    width:11vw;
 }
+.lastPara{
+    text-align: center;
 
-@media screen and (max-width:900px){
+}
+@media screen and (max-width:1030px){
     .MuiTypography-body1, .MuiButton-label{
         font-size: medium;
     }
@@ -160,9 +173,12 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-top: -1.6rem;
+        margin-top: 2vh;
         width: 100%;
-        height: 150px;
+        height: 12vh;
+    }
+    .topText{
+        font-size: large;
     }
     .form-section {
         padding-top: 10px;
@@ -172,6 +188,102 @@ body{
         display: flex;
         flex-direction: column;
         margin-left:2% ;
+        border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;
+    }
+    .btns{
+
+        width: 100%;
+        
+        
+    }
+  
+    .div1, .div2, .div3 {
+        -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
+        background: #fff;
+        margin-top: 2vh;
+    }
+    .lastPara{
+        font-size: large;
+    }
+    .welcomMsg {
+        color: rgb(48, 42, 42);
+        font-size: 2rem;
+        text-transform: capitalize;
+        word-spacing: 0.2rem;
+
+        
+    }
+    .textField{
+        height: 11vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: -1.5rem;
+    }
+    .center{
+        margin-top: 2vh;
+    }
+    .MuiOutlinedInput-input{
+        padding:13px 2px;
+        font-size: medium;
+      }
+      .MuiOutlinedInput-root {
+        height: 3.5rem;
+    }
+    .MuiButton-contained {
+      font-size: large;
+    }
+    
+    .MuiTypography-body1, .MuiButton-label {
+        font-size: small;
+    }
+    .MuiOutlinedInput-input{
+    padding:13px 2px;
+    font-size: medium;
+    }
+
+.btns{
+    font-size: 10rem;
+    line-height: 2.3rem;
+    font-weight: bolder;
+    
+
+}
+}
+
+@media screen and (max-width:960px){
+    .MuiTypography-body1, .MuiButton-label{
+        font-size: medium;
+    }
+  
+    .buttonSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        /* height: 10vh; */
+        height: 13vh;
+    }
+   
+  
+    .form-section {
+
+        display: flex;
+        flex-direction: column;
         border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 50%;
 
@@ -195,32 +307,48 @@ body{
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
+        margin-top: -1.3rem;
         background: #fff;
     }
     .welcomMsg {
         color: rgb(48, 42, 42);
-        font-size: 1rem;
+        /* font-size: 1rem; */
         text-transform: capitalize;
         word-spacing: 0.2rem;
 
         
     }
     .textField{
-        height: 150px;
+        height: 17vh;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        /* margin-top: -2rem; */
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         justify-content: space-around;
-        margin-top: -1.4rem;
+        width: 100%;
+       text-align: center;
+       height: 8vh;
+       /* border: 2px solid blue; */
+       /* margin-top: -2rem; */
+    
     }
     .para {
         color: rgb(48, 42, 42);
         font-size: 1rem;
         text-transform: capitalize;
         word-spacing: 0.2rem;
-        margin-top: -2rem;
+        /* margin-top: -2rem; */
     }
 
   .MuiOutlinedInput-input{
@@ -246,29 +374,18 @@ font-size: small;
 width: 0.7em;
 height: 0.7em;
 display: inline-block;
-font-size: 2.5rem;
+font-size: 1.8rem;
 transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 flex-shrink: 0;
 -moz-user-select: none;
 }
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-   text-align: center;
-   height: 30px;
-   margin-top: -2rem;
 
-}
 .btns{
     font-size: 10rem;
     line-height: 2rem;
     font-weight: bolder;
+    
+
 }
 .MuiFormControlLabel-root{
     margin-left: -10px;
@@ -291,9 +408,9 @@ flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-top: -3rem;
+        margin-top: 2vh;
         width: 100%;
-        height: 150px;
+        height: 15vh;
     }
     .form-section {
         padding-top: 10px;
@@ -325,14 +442,15 @@ flex-shrink: 0;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
         background: #fff;
+        margin-top: 2vh;
     }
     .welcomMsg {
         color: rgb(48, 42, 42);
-        font-size: 1rem;
+        font-size: 1.5rem;
         text-transform: capitalize;
         word-spacing: 0.2rem;
 
@@ -345,16 +463,9 @@ flex-shrink: 0;
         justify-content: space-around;
         margin-top: -1.5rem;
     }
-    .para {
-        color: rgb(48, 42, 42);
-        font-size: 1rem;
-        text-transform: capitalize;
-        word-spacing: 0.2rem;
-        margin-top: -2rem;
-
-        
-    }
-
+   .topText{
+       font-size: small;
+   }
     .MuiOutlinedInput-input {
         padding: 13px 2px;
         font-size: medium;
@@ -409,8 +520,8 @@ flex-shrink: 0;
     justify-content: space-between;
     width: 100%;
    text-align: center;
-   height: 6rem;
-   margin-top: -3rem;
+   /* height: 20vh; */
+   margin-top: 2vh;
    position: relative;
 
 
@@ -433,11 +544,28 @@ flex-shrink: 0;
     
     /* height: 43px; */
 }
+.MuiButton-text{
+    padding: 6px 28px;
+}
 }
 
 
 
 @media screen and (max-width:600px){
+    /* body{
+        font-size: calc(14px + (13 - 14) * ((100vw - 300px) / (1600 - 300)));;
+       
+    } */
+    .container {
+
+        width: 75vw;
+        height: 85vh;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: auto;
+    }
     .MuiTypography-body1, .MuiButton-label{
         font-size: small;
     }
@@ -447,7 +575,7 @@ flex-shrink: 0;
         flex-direction: column;
         justify-content: space-around;
 
-        margin-top: -1.6rem;
+        margin-top: 1vh;
         width: 100%;
         height: 100px;
     }
@@ -491,7 +619,7 @@ flex-shrink: 0;
         background: #fff;
     }
     .welcomMsg {
-        margin-top: 3vh;
+        margin-top: 1vh;
         color: rgb(48, 42, 42);
         font-size: 1.3rem;
         text-transform: capitalize;
@@ -500,20 +628,15 @@ flex-shrink: 0;
         
     }
     .textField{
-        height: 150px;
+        height: 25vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-top: -1.4rem;
+        margin-top:1vh;
     }
-    .para {
-        color: rgb(48, 42, 42);
-        font-size: 0.8rem;
-        text-transform: capitalize;
-        word-spacing: 0.2rem;
-        margin-top: -2rem;
-
-        
+    .topText{
+        margin-top: 1vh;
+        font-size: smaller;
     }
 
   .MuiOutlinedInput-input{
@@ -558,8 +681,9 @@ flex-shrink: 0;
     justify-content: space-around;
     width: 100%;
    text-align: center;
-   height: 30px;
-   margin-top: -2rem;
+   height: 10vh;
+   
+   margin-top: -2vh;
 
 
 }
@@ -574,17 +698,17 @@ flex-shrink: 0;
 }
 .lastPara{
     font-size: small;
-    margin-top: -1.5rem;
+    margin-top: 1.7vh;
 }
 .socials{
-    margin-top: -1.6rem;
+    margin-top: 6vh;
 }
 }
 
 
-@media screen and (max-width:500px){
+@media screen and (max-width:540px){
     .welcomMsg{
-        margin-top: -1rem;
+        margin-top: -2vh;
         font-size: 0.9rem;
     }
     .MuiTypography-body1, .MuiButton-label{
@@ -594,7 +718,7 @@ flex-shrink: 0;
     .buttonSection {
         display: flex;
         flex-direction: column;
-  
+        margin-top: 1rem;
         width: 100%;
         height: 70px;
     }
@@ -603,6 +727,17 @@ flex-shrink: 0;
         width: 100%;
         
         
+    }
+    .img {
+        min-height: auto;
+         
+    width: 100%;
+        height: 95vh;
+        background-image: url("../img/undraw_remotely_2j6y.svg");
+        background-position: center;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
     .div1, .div2, .div3 {
         -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
@@ -623,22 +758,25 @@ flex-shrink: 0;
         background: #fff;
     }
     .lastPara  {
-        /* margin-top: "3vh"; */
+        margin-top: 1vh;
         color: rgb(48, 42, 42);
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         text-transform: capitalize;
         word-spacing: 0.1rem;
+      text-align: center;
 
         
     }
     .textField{
-        margin-top: -1rem;
+        /* margin-top: -3vh; */
+
         height: 7em;
 }
     .para {
-        margin-top: -1rem;
+        margin-top: -8vh;
+
         color: rgb(48, 42, 42);
-        font-size: 0.6rem;
+        /* font-size: 0.8rem; */
         text-transform: capitalize;
 
         
@@ -648,12 +786,12 @@ flex-shrink: 0;
         margin-right: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 100%;
        text-align: center;
-       /* border:2px solid blue; */
-       height: 5rem;
+       height:8vh;
        position: relative;
+       margin-top: 0.7vh;
     }
     .MuiOutlinedInput-root {
         height: 35px;
@@ -694,14 +832,14 @@ flex-shrink: 0;
 
   .form-section {
     padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+    /* padding-bottom: 10px; */
+    /* padding-left: 0.1rem; */
+    /* padding-right: 0.1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
-    margin-left:2% ;
+    /* margin-left:2% ; */
     border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     width: 50%;
@@ -716,8 +854,50 @@ transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 flex-shrink: 0;
 -moz-user-select: none;
 }
+.socials{
+    margin-top: 2vh;
+}
 }
 
+@media screen and (max-width:416px){
+    /* body{
+        background-color: #ff0099;
+    } */
+    
+      .welcomMsg {
+          margin-top: -1rem;
+          color: rgb(48, 42, 42);
+          font-size: 0.7rem;
+      }
+    
+      .MuiOutlinedInput-adornedStart {
+          padding-left: 4px;
+      }
+  
+         .buttonSection {
+             display: flex;
+             flex-direction: column;
+             width: 100%;
+             height: 14vh;
+             /* margin-top: -1.5rem; */
+         }
+         .textField{
+             height: 20vh;
+             margin-top: 0.2rem;
+  
+         }
+     
+         .btns{
+  
+             width: 100%;
+             
+             
+         }
+    .lastPara{
+        font-size: 0.6rem;
+    }
+     
+     }
 
 
 @media screen and (max-width:360px){
@@ -731,16 +911,14 @@ flex-shrink: 0;
         font-size: 0.7rem;
     }
     .form-section {
-        padding-top: 8px;
+        /* padding-top: 8px;
         padding-bottom: 10px;
         padding-left: 0.1rem;
-        padding-right: 0.1rem;
+        padding-right: 0.1rem; */
         display: flex;
         flex-direction: column;
-        /* justify-content: space-evenly; */
-        /* align-items: center; */
-        /* margin-left: auto; */
-        margin-left:2% ;
+
+        /* margin-left:2% ; */
         border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
         width: 50%;
@@ -753,17 +931,15 @@ flex-shrink: 0;
            display: flex;
            flex-direction: column;
            width: 100%;
-           height: 5rem;
-           margin-top: -1.5rem;
+           height: 11vh;
+           /* margin-top: -1.5rem; */
        }
        .textField{
            height: 6em;
            margin-top: 0.2rem;
 
        }
-       .MuiOutlinedInput-adornedEnd {
-        padding-right: 12px;
-    }
+   
        .btns{
 
            width: 100%;
@@ -795,7 +971,7 @@ flex-shrink: 0;
        .lastPara  {
            /* margin-top: "3vh"; */
            color: rgb(48, 42, 42);
-           font-size: 0.5rem;
+           font-size: 0.6rem;
            text-transform: capitalize;
            word-spacing: 0.1rem;
            margin-top: 0.2rem;
@@ -807,8 +983,7 @@ flex-shrink: 0;
            color: rgb(48, 42, 42);
            font-size: 0.6rem;
            text-transform: capitalize;
-           /* word-spacing: rem; */
-           /* text-align: center; */
+    
    
            
        }
@@ -837,7 +1012,7 @@ flex-shrink: 0;
            align-items: center;
            width: 100%;
           
-           height: 5rem;
+           height: 7rem;
        }
   
        .MuiOutlinedInput-input{
@@ -863,4 +1038,161 @@ flex-shrink: 0;
     justify-content: space-between;
     margin-top: 0.5rem;
 }
+.MuiIconButton-root {
+   padding-right: 8px;
+}
+.MuiFormLabel-root {
+   font-size: small;
+    line-height: 1;
+    letter-spacing: 0.2em;
+}
    }
+
+
+
+@media screen and (max-width:320px){
+    /* body{
+        background-color: #ff0099;
+    } */
+    
+      .welcomMsg {
+          color: rgb(48, 42, 42);
+          font-size: 0.7rem;
+      }
+      .form-section {
+          /* padding-top: 8px;
+          padding-bottom: 10px;
+          padding-left: 0.1rem;
+          padding-right: 0.1rem; */
+          display: flex;
+          flex-direction: column;
+  
+          /* margin-left:2% ; */
+          border-left:   rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      
+          width: 50%;
+      }  
+      .MuiOutlinedInput-adornedStart {
+          padding-left: 4px;
+      }
+  
+         .buttonSection {
+             display: flex;
+             flex-direction: column;
+             width: 100%;
+             height: 20vh;
+             justify-content: space-around;
+             /* margin-top: -1.5rem; */
+         }
+         .textField{
+             height: 6em;
+             margin-top: 0.2rem;
+  
+         }
+     
+         .btns{
+  
+             width: 100%;
+             
+             
+         }
+         .MuiFab-root {
+         min-height: auto;
+          
+      }
+         .div1, .div2, .div3 {
+             -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+             display: -webkit-box;
+             display: -ms-flexbox;
+             display: flex;
+             -webkit-box-pack: center;
+             -ms-flex-pack: center;
+             justify-content: center;
+             -webkit-box-align: center;
+             -ms-flex-align: center;
+             align-items: center;
+             height: 27px;
+             width: 27px;
+             border-radius: 50%;
+             background: -webkit-gradient(linear, left top, right top, from(#493240), to(#ff0099));
+             background: #fff;
+         }
+         .lastPara  {
+             /* margin-top: "3vh"; */
+             color: rgb(48, 42, 42);
+             font-size: 0.5rem;
+             text-transform: capitalize;
+             margin-top: 0.2rem;
+     
+             
+         }
+         .para {
+             margin-top: -0.5rem;
+             color: rgb(48, 42, 42);
+             font-size: 0.5rem;
+             text-transform: capitalize;
+      
+     
+             
+         }
+         .align{
+             /* width: 100%; */
+             text-align: center;
+             display: flex;
+             justify-content: space-around;
+             /* margin-top: 1rem; */
+             
+         }
+         .MuiIconButton-label{
+          width: 0.1rem;
+         }
+         .MuiButtonBase-root {
+     
+          height: 1.8rem;
+      }
+         .center {
+             margin-left: auto;
+             margin-right: auto;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+             justify-content: center;
+             align-items: center;
+             width: 100%;
+            
+             height: 8vh;
+         }
+    
+         .MuiOutlinedInput-input{
+             font-size: xx-small;
+         }
+         .MuiOutlinedInput-root {
+             height: 30px;
+         }
+         
+       
+     .MuiSvgIcon-root{
+         fill: currentColor;
+     width: 0.5em;
+     height: 0.5em;
+     display: inline-block;
+     font-size: 1.6rem;
+     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+     flex-shrink: 0;
+     -moz-user-select: none;
+     }
+     .socials {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 7vh;
+  }
+  .MuiIconButton-root {
+     padding-right: 8px;
+  }
+  .MuiFormLabel-root {
+     font-size: small;
+      line-height: 1;
+      letter-spacing: 0.2em;
+  }
+     }
