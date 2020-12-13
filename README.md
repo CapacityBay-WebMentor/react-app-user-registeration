@@ -7,7 +7,7 @@
 
 ## Contributions and PR
 
-- All the PRs should be generated against `master` branch
+- All the PRs should be generated against the `Dev` branch
 - Remember to run `npm run format` before creating pull request so that the code is formatted.
 - Github will create a preview inside pull request, please check if your work is fine.
 - If the PR is related to any front end change, please attach relevant screenshots in the pull request description.
@@ -25,33 +25,11 @@ Quick start options:
 
 - [Download from Github](https://capacitybay-webmentor.github.io/react-app-user-registeration/).
 - Clone the repo: `https://github.com/dscmsit/dscmsit.github.io.git`.
-- `npm install` to install all the devDependencies
+- `npm install` to install get the nodemodules dependencies.
 
-## What's included
-
-Within the download you'll find the following directories and files:
-
-```
+## Reference links
+https://www.adeinetwork.org/
 dscmsit.github.io/
-├── css/
-|   ├── index.css
-|   ├── team.css
-|   ├── youtube.css
-|   └── svg.css
-├── js/
-|   ├── index.js
-|   ├── jq.js
-|   └──team.js
-├── icons/
-|   └──favicons/
-├── images/
-|       └──board19/
-├── CNAME
-├── index.html
-├── videos.html
-├── manifest.json
-├── sw.js
-└── team.html
 
 ```
 
