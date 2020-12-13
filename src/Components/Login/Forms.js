@@ -32,6 +32,7 @@ class Forms extends Component {
       />
     );
   };
+
   passwd = () => {
     return (
       <input

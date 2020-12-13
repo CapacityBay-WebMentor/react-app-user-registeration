@@ -21,8 +21,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
-// import Particles from "react-particles-js";
-// import Tilt from "react-tilt";npm start
 
 //  i am still working on this interface
 const iconColor = {
@@ -56,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
   // '&:hover':bac
 }));
 
+// floating action button
 function Twitter() {
   return (
     <div className="twitter">
@@ -183,11 +182,14 @@ function Facebook() {
     </div>
   );
 }
+// floating action button end
 
-// smart Component
+// smart component (ie my parent component)
+
 function CalliLogin() {
   const classes = useStyles();
 
+  // child component
   const PasswordInput = () => {
     const classes = useStyles();
     const [values, setValues] = React.useState({
@@ -206,8 +208,6 @@ function CalliLogin() {
     const handleMouseDownPassword = (event) => {
       event.preventDefault();
     };
-
-    // const [values, setValues] = React.useState({});
 
     return (
       <div className={classes.root}>
@@ -245,7 +245,9 @@ function CalliLogin() {
       </div>
     );
   };
-  // email section
+
+  // email section (child component)
+
   const EmailTextField = () => {
     return (
       <TextField
@@ -265,6 +267,8 @@ function CalliLogin() {
       />
     );
   };
+
+  // formController  houses my form elements
   const FormController = () => {
     const setStyles = makeStyles((theme) => ({
       root: {
@@ -358,6 +362,7 @@ function CalliLogin() {
       );
     };
 
+    // my button components
     const StyledButton = () => {
       const myStyle = useStyles();
       return (
@@ -388,6 +393,9 @@ function CalliLogin() {
         </Button>
       );
     };
+    // end of button component
+
+    // return of my FormController component
     return (
       <StylesProvider injectFirst>
         {/* <div> */}
@@ -396,25 +404,26 @@ function CalliLogin() {
           To keep connected with us please login with your personal information
           {" 🔔"}
         </p>
-        <div className="textField">
-          <EmailTextField />
-          <PasswordInput />
-        </div>
-        {/* checkbox and forgot password */}
-        <div className="center">
-          <div className="align">
-            {" "}
-            <CheckBoxComponent />
+        <form>
+          <div className="textField">
+            <EmailTextField />
+            <PasswordInput />
           </div>
-          <div className="align">
-            <ForgotPasswordComponent />
+          {/* checkbox and forgot password */}
+          <div className="center">
+            <div className="align">
+              {" "}
+              <CheckBoxComponent />
+            </div>
+            <div className="align">
+              <ForgotPasswordComponent />
+            </div>
           </div>
-        </div>
-        <div className="buttonSection">
-          <StyledButton />
-          <StyledButton2 />
-        </div>
-
+          <div className="buttonSection">
+            <StyledButton />
+            <StyledButton2 />
+          </div>
+        </form>
         <div>
           <p className="lastPara" style={{ color: "#382f34" }}>
             Or you can join us with
@@ -429,20 +438,30 @@ function CalliLogin() {
       </StylesProvider>
     );
   };
-  // < Button color="primary" > Primary</Button>
-  // checkMediaQuery = () => {};
-
+  function TopBar() {
+    return (
+      <div className="navBar">
+        <div>
+          <h2>LOGO</h2>
+        </div>
+      </div>
+    );
+  }
+  // return of my parent component
   return (
     // <StylesProvider injectFirst>
-    <div className="container">
-      <div className="innerContainer">
-        <div className="illustration">
-          <div className="img"></div>
-        </div>
-        <div className="form-section" style={{ width: "45%" }}>
-          {FormController()}
+    <div className="parentContainer">
+      <TopBar />
+      <div className="container">
+        <div className="innerContainer">
+          <div className="illustration">
+            <div className="img"></div>
+          </div>
+          <div className="form-section" style={{ width: "45%" }}>
+            {FormController()}
 
-          {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
+            {/* {window.addEventListener("resize", this.checkMediaQuery)} */}
+          </div>
         </div>
       </div>
     </div>
