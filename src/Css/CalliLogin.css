@@ -495,7 +495,7 @@ font-size: medium;
     width: 100%;
 }
 .MuiButton-textPrimary{
-    width: 100%;
+    /* width: 100%; */
 }
 .MuiButton-label {
     font-size: small;
@@ -545,7 +545,7 @@ flex-shrink: 0;
     /* height: 43px; */
 }
 .MuiButton-text{
-    padding: 6px 28px;
+    /* padding: 6px 28px; */
 }
 }
 
