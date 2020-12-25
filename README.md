@@ -26,6 +26,7 @@ Quick start options:
 - [Download from Github](https://capacitybay-webmentor.github.io/react-app-user-registeration/).
 - Clone the repo: `https://github.com/dscmsit/dscmsit.github.io.git`.
 - `npm install` to install get the nodemodules dependencies.
+- 'npm start' to start to start react app.
 
 ## Reference links
 https://www.adeinetwork.org/
