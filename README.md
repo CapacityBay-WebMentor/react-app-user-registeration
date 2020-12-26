@@ -28,6 +28,7 @@ Quick start options:
 - `npm install` to install get the nodemodules dependencies.
 - 'npm start' to start to start react app.
 - 'change' Now making a change.
+- Did you notice the new change
 
 ## Reference links
 https://www.adeinetwork.org/
