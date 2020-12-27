@@ -11,7 +11,7 @@ import Forms from "./Components/Login/Forms";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CalliLogin />
+    <Landing />
   </React.StrictMode>,
   document.getElementById("root")
 );

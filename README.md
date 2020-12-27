@@ -28,7 +28,9 @@ Quick start options:
 - `npm install` to install get the nodemodules dependencies.
 - 'npm start' to start to start react app.
 - Solution Need Please
-
+- 'change' Now making a change.
+- Did you notice the new change
+- Trying out Master Branch Now
 ## Reference links
 https://www.adeinetwork.org/
 dscmsit.github.io/
