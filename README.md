@@ -27,6 +27,7 @@ Quick start options:
 - Clone the repo: `https://github.com/dscmsit/dscmsit.github.io.git`.
 - `npm install` to install get the nodemodules dependencies.
 - 'npm start' to start to start react app.
+- Solution Need Please
 
 ## Reference links
 https://www.adeinetwork.org/
