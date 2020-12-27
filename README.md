@@ -29,7 +29,7 @@ Quick start options:
 - 'npm start' to start to start react app.
 - 'change' Now making a change.
 - Did you notice the new change
-
+- Trying out Master Branch Now
 ## Reference links
 https://www.adeinetwork.org/
 dscmsit.github.io/
