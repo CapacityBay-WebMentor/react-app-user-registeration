@@ -164,6 +164,10 @@ width: 100%;
     text-align: center;
 
 }
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: red;
+}
 @media screen and (max-width:1030px){
     .MuiTypography-body1, .MuiButton-label{
         font-size: medium;
