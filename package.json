@@ -12,7 +12,8 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-particles-js": "^3.4.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
