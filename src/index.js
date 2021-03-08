@@ -8,10 +8,14 @@ import Header from "./Components/Header";
 import Landing from "./Components/Hompages/Landing";
 import CalliLogin from "./Components/Login/CalliLogin";
 import Forms from "./Components/Login/Forms";
+import Cally from "./Components/Login/Cally";
+import InputField from "./Components/Login/InputField";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CalliLogin />
+    <InputField />
+    {/* <CalliLogin /> */}
+    {/* <Cally /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
