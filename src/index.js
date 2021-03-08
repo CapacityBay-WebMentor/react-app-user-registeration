@@ -7,13 +7,11 @@ import Ken_login from "./Components/Login/CalliLogin";
 import Header from "./Components/Header";
 import Landing from "./Components/Hompages/Landing";
 import CalliLogin from "./Components/Login/CalliLogin";
-import Forms from "./Components/Login/Forms";
-import Cally from "./Components/Login/Cally";
-import InputField from "./Components/Login/InputField";
+import LoginForm from "./Components/Login/LoginForm";
 
 ReactDOM.render(
   <React.StrictMode>
-    <InputField />
+    <LoginForm />
     {/* <CalliLogin /> */}
     {/* <Cally /> */}
   </React.StrictMode>,

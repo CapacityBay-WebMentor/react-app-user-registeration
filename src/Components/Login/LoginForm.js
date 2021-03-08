@@ -1,15 +1,11 @@
 import React from "react";
-import "../../Css/input.css";
+import "../../Css/Login.css";
 import "materialize-css/dist/css/materialize.min.css";
 import "materialize-css/dist/js/materialize.min.js";
 import "material-icons/iconfont/material-icons.css";
 import Ripples from "react-ripples";
 import { IconContext } from "react-icons";
 import { FaApple, FaFacebookF, FaGithub } from "react-icons/fa";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { apple } from "@fortawesome/free-solid-svg-icons";
-import { Modal, Button, TextInput } from "react-materialize";
 
 function InputField() {
   function passwordVisibility() {
@@ -27,10 +23,11 @@ function InputField() {
       <div className="row   form-container">
         {/* <div>xx</div> */}
         {/* <div className="col l12 login-text"> */}
-        <h5 className="login-text">Login</h5>
         {/* </div> */}
         <form class="col s12 ">
-          <div className="row ">
+          <div className="row  form">
+            <h5 className="login-text">Login</h5>
+
             <div className="inputs ">
               <div className="row ">
                 <div class="input-field col s12">
@@ -47,15 +44,16 @@ function InputField() {
                   </span>
                 </div>
               </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <span class="material-icons prefix">enhanced_encryption</span>
-                  <input id="password" type="password" class="validate" />
-                  <label for="password">Password</label>
-                </div>
+            </div>
 
-                {/* <p></p> */}
+            <div class="row">
+              <div class="input-field col s12">
+                <span class="material-icons prefix">enhanced_encryption</span>
+                <input id="password" type="password" class="validate" />
+                <label for="password">Password</label>
               </div>
+
+              {/* <p></p> */}
             </div>
             {/* check in and show password */}
             <div className="row center-checkbox  ">
@@ -71,6 +69,7 @@ function InputField() {
               {/* <p className="col s12  col m5"> */}
               <div className="center-btn align-center">
                 <a
+                  href="#"
                   className="waves-effect  waves-teal btn-flat col m5   cell col s12 col l4"
                   // style={{  }}
                   style={{
@@ -79,7 +78,7 @@ function InputField() {
                     textTransform: "Lowercase",
                   }}
                 >
-                  <center>forgot password ?</center>
+                  forgot password ?
                 </a>
               </div>
 

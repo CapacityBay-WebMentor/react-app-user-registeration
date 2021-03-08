@@ -13,6 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    /* border:1px solid blue; */
+
 }
 .center-parent{
     
@@ -25,14 +27,21 @@
 
 }
 .login-text{
-    height: 5vh;
+    margin-top: 2vh;
+    /* height: 5vh; */
     color: #9e9e9e;
-    /* border:1px solid blue; */
     text-align: center;
-    margin-top: -2vh;
 
 }
+.form{
+    height: 95vh;
+    /* border:1px solid blue; */
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
 .form-container{
         padding: 5% 4% 2% 3%;
         margin: 0;
@@ -40,6 +49,7 @@
         flex-direction: column;
         width: 70vw;
         justify-content: space-around;
+        height: 100vh;
       
 
 }
@@ -101,7 +111,7 @@ align-items: center;
     height: 0vh;
     color: #9e9e9e;
     text-align: center;
-    margin-top: -2vh;
+    margin-top: 2vh;
 
 }
 
